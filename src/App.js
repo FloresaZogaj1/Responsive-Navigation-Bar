@@ -13,23 +13,19 @@ class App extends Component{
 
     );
   };
-  BackdropClickHandler =()=>{
-    this.setState({SideDrawerOpen: false});
-
-  };
 
   render(){
     let SideDrawer;
     let Backdrop;
     if(this.state.SideDrawerOpen){
       SideDrawer=<SideDrawer/>;
-      Backdrop=<Backdrop click={this.BackdropClickHandler}/>
+      Backdrop=<Backdrop/>
     }
 
   return (
     <div style={{height: '100%'}}>
       <Toolbar drawerToggleClickHandler={this.drawerToggleClickHandler}/>
-      <SideDrawer show={this.state.SideDrawerOpen}/>
+      {SideDrawer}
       {Backdrop}
       <main style={{marginTop: '64px'}}>
       <p>This is the page content</p>
