@@ -1,14 +1,20 @@
 import React from "react";
-import'./SideDrawer.css';
+import './SideDrawer.css';
 
-const SideDrawer =props => (
-<nav className="side-drawer">
-    <uL>
-        <li> <a href="/">Products</a></li>
-        <li> <a href="/">Users</a></li>
+const sideDrawer =props=>{
+let drawerClasses='side-drawer';
+if(props.show){
+    drawerClasses='side-drawer-open';
+}
+return (
 
-    </uL>
-</nav>
+    <nav className={drawerClasses}>
+        <ul>
+            <li><a href="/">Products</a></li>
+            <li><a href="/">Users</a></li>
 
-);
-export default SideDrawer;
+        </ul>
+    </nav>
+) 
+};
+export default sideDrawer;
