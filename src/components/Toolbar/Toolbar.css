@@ -5,6 +5,7 @@
     height: 56px;
     top: 0;
     left:0;
+    z-index: 200;
 
 }
 .toolbar_navigation{
@@ -46,13 +47,12 @@
 }
 @media (max-width: 768px){
 .toolbar_navigation-items{
-    display: none;
+    display: flex;
 }
 }
 @media (min-width:769px){
     .toolbar_toggle-button{
-
-    
+    display: none;
     }
     .toolbar_logo{
         margin-left: 0;

@@ -1,6 +1,8 @@
 import React from "react";
-import './Backdrop.css';
-const backdrop =props=>(
-<div className="backdrop" onClick={props.click}/>
+import "./Backdrop.css";
+
+const Backdrop = (props) => (
+  <div className="backdrop" onClick={props.click}></div>
 );
-export default backdrop;
+
+export default Backdrop;

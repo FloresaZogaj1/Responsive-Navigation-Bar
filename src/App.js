@@ -14,24 +14,23 @@ class App extends React.Component {
     }));
   };
 
-  backdropClickHandler =()=>{
-    this.setState({sideDrawerOpen:false});
+  backdropClickHandler = () => {
+    this.setState({ sideDrawerOpen: false });
   };
+
   render() {
-    let sideDrawer;
     let backdrop;
 
     if (this.state.sideDrawerOpen) {
-      sideDrawer = <SideDrawer show={this.state.sideDrawerOpen} />;
       backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
 
     return (
-      <div className='App'>
-        <Toolbar drawerClickHandler={this.drawerToggleClickHandler}/>
-        {sideDrawer}
+      <div className="App" style={{ height: '100%' }}>
+        <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
+        <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
-        <main style={{ marginTop: '100%' }}>
+        <main style={{ marginTop: '23px' }}> {/* Adjust margin-top to height of Toolbar */}
           <p>This is the page content</p>
         </main>
       </div>

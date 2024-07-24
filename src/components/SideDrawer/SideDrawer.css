@@ -34,7 +34,7 @@ transform: translateX( 0);
 .side-drawer a:active{
     color:#fa923f ;
 }
-@media (min-width:769px){
+@media (min-width:768px){
     .side-drawer{
         display: none;
     }
